@@ -8,5 +8,4 @@ compiler:
 before_install:
   - sudo apt-get install libssl-dev
 script: 
-  - cmake .
   - make .
