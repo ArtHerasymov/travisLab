@@ -1,7 +1,7 @@
 [![Travis-CI][travis-badge]][travis-builds]
 
-[travis-badge]: https://travis-ci.org/ArtHerasymov/lab8.svg?branch=master
-[travis-builds]: https://travis-ci.org/ArtHerasymov/lab8/builds
+[travis-badge]: https://travis-ci.org/ArtHerasymov/travisLab.svg?branch=master
+[travis-builds]: https://travis-ci.org/ArtHerasymov/travisLab/builds
 # Lab8(progbase)
 ## Goal : learn how to create a simple web server, using http interaction.
 ## Task1 : Create TCP-server that would listen to TCP-clients' requests and interacts with them using HTTP protocol. Server should process only HTTP GET request and return adequetly formattted HTTP responses.
