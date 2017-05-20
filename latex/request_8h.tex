@@ -1,0 +1,284 @@
+\hypertarget{request_8h}{}\section{include/request.h File Reference}
+\label{request_8h}\index{include/request.\+h@{include/request.\+h}}
+
+
+Module responsible for processing requests.  
+
+
+{\ttfamily \#include $<$progbase/net.\+h$>$}\\*
+{\ttfamily \#include $<$progbase/list.\+h$>$}\\*
+Include dependency graph for request.\+h\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structRequest}{Request}
+\begin{DoxyCompactList}\small\item\em Defines \hyperlink{structRequest}{Request} structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structResponse}{Response}
+\begin{DoxyCompactList}\small\item\em Defines \hyperlink{structResponse}{Response} structure. \end{DoxyCompactList}\item 
+struct \hyperlink{structCommandHandler}{Command\+Handler}
+\begin{DoxyCompactList}\small\item\em Defines \hyperlink{structCommandHandler}{Command\+Handler} structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries M\+A\+X\+\_\+\+C\+O\+M\+M\+A\+N\+D\+\_\+\+L\+EN}~100\hypertarget{request_8h_a81f68567c11671e8c35cfcfb454a4160}{}\label{request_8h_a81f68567c11671e8c35cfcfb454a4160}
+
+\item 
+\#define {\bfseries M\+A\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+L\+EN}~256\hypertarget{request_8h_a5a780ff4bf3f3cf2974013aa3d9d0ad8}{}\label{request_8h_a5a780ff4bf3f3cf2974013aa3d9d0ad8}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{request_8h_a18cbec46cf3788fbea4190f23daad77f}{Request\+Handler}) (\hyperlink{structRequest}{Request} $\ast$req, \hyperlink{structResponse}{Response} $\ast$res)
+\begin{DoxyCompactList}\small\item\em Callback function that is invoked upon initialization. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structRequest}{Request} \hyperlink{request_8h_ab6a2ed317deba522ec71355b2bd6756d}{parse\+Request} (const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Identifies command. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_aa8c6f418604b194f3097873160628501}{Response\+\_\+cleanup} (\hyperlink{structResponse}{Response} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Frees memory, allocated by response. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_a52d80f6d4886b1bb22cdd1fd84771a1c}{Response\+\_\+init} (\hyperlink{structResponse}{Response} $\ast$self)
+\begin{DoxyCompactList}\small\item\em Initializes response list. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_add589bf288f0a10952a9403fb369beaa}{Response\+\_\+add\+Number} (\hyperlink{structResponse}{Response} $\ast$self, int number)
+\begin{DoxyCompactList}\small\item\em Adds number to response. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_ace3966fdc8d65af52d2e305b80fbdb44}{Response\+\_\+add\+String} (\hyperlink{structResponse}{Response} $\ast$self, const char $\ast$str)
+\begin{DoxyCompactList}\small\item\em Adds string to response. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_ab0715b1b2c552d0238c926dcf52dc984}{Response\+\_\+set\+Error} (\hyperlink{structResponse}{Response} $\ast$self, const char $\ast$error)
+\begin{DoxyCompactList}\small\item\em Adds error to respnse. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_aa41d3721311ccecce32d108ebce30f32}{Response\+\_\+set\+Items\+Type} (\hyperlink{structResponse}{Response} $\ast$self, int items\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the type of item that would be stored in response message. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_a22f2a2dea499f25d1b0929cc99ceb897}{Response\+\_\+to\+Message} (\hyperlink{structResponse}{Response} $\ast$res, Net\+Message $\ast$message)
+\begin{DoxyCompactList}\small\item\em Convertes response structure Net\+Message structure. \end{DoxyCompactList}\item 
+void \hyperlink{request_8h_a7a4978a06b98ee1f1802065288aa2f7a}{process\+Request} (\hyperlink{structRequest}{Request} $\ast$req, \hyperlink{structResponse}{Response} $\ast$res, \hyperlink{structCommandHandler}{Command\+Handler} $\ast$handlers, int len)
+\begin{DoxyCompactList}\small\item\em Determines what command to proceed with. \end{DoxyCompactList}\item 
+int \hyperlink{request_8h_a69adbfb32cf10e74134b35beba47afe8}{is\+Id} (char $\ast$command)
+\begin{DoxyCompactList}\small\item\em Function that determines id-\/base command. \end{DoxyCompactList}\item 
+int \hyperlink{request_8h_a0efc75d5241e81e5c0a6a18b88fbea12}{is\+Complex} (char $\ast$command)
+\begin{DoxyCompactList}\small\item\em Function that determines whether command is a complex favourite command. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Module responsible for processing requests. 
+
+
+
+\subsection{Typedef Documentation}
+\index{request.\+h@{request.\+h}!Request\+Handler@{Request\+Handler}}
+\index{Request\+Handler@{Request\+Handler}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Request\+Handler}{RequestHandler}}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ Request\+Handler) ({\bf Request} $\ast$req, {\bf Response} $\ast$res)}\hypertarget{request_8h_a18cbec46cf3788fbea4190f23daad77f}{}\label{request_8h_a18cbec46cf3788fbea4190f23daad77f}
+
+
+Callback function that is invoked upon initialization. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & -\/ pointer to request \\
+\hline
+{\em res} & -\/ pointer to response \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\index{request.\+h@{request.\+h}!is\+Complex@{is\+Complex}}
+\index{is\+Complex@{is\+Complex}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{is\+Complex(char $\ast$command)}{isComplex(char *command)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Complex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_a0efc75d5241e81e5c0a6a18b88fbea12}{}\label{request_8h_a0efc75d5241e81e5c0a6a18b88fbea12}
+
+
+Function that determines whether command is a complex favourite command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & -\/ string consisting entire command \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!is\+Id@{is\+Id}}
+\index{is\+Id@{is\+Id}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{is\+Id(char $\ast$command)}{isId(char *command)}}]{\setlength{\rightskip}{0pt plus 5cm}int is\+Id (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{command}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_a69adbfb32cf10e74134b35beba47afe8}{}\label{request_8h_a69adbfb32cf10e74134b35beba47afe8}
+
+
+Function that determines id-\/base command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em command} & -\/ string consisting entire command \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!parse\+Request@{parse\+Request}}
+\index{parse\+Request@{parse\+Request}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{parse\+Request(const char $\ast$str)}{parseRequest(const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Request} parse\+Request (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_ab6a2ed317deba522ec71355b2bd6756d}{}\label{request_8h_ab6a2ed317deba522ec71355b2bd6756d}
+
+
+Identifies command. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & -\/ string consisting command \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!process\+Request@{process\+Request}}
+\index{process\+Request@{process\+Request}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{process\+Request(\+Request $\ast$req, Response $\ast$res, Command\+Handler $\ast$handlers, int len)}{processRequest(Request *req, Response *res, CommandHandler *handlers, int len)}}]{\setlength{\rightskip}{0pt plus 5cm}void process\+Request (
+\begin{DoxyParamCaption}
+\item[{{\bf Request} $\ast$}]{req, }
+\item[{{\bf Response} $\ast$}]{res, }
+\item[{{\bf Command\+Handler} $\ast$}]{handlers, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_a7a4978a06b98ee1f1802065288aa2f7a}{}\label{request_8h_a7a4978a06b98ee1f1802065288aa2f7a}
+
+
+Determines what command to proceed with. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & -\/ pointer to request \\
+\hline
+{\em res} & -\/ pointer to response \\
+\hline
+{\em handlers} & -\/ pointer to the array of handler to choose from \\
+\hline
+{\em len} & -\/ the length of handlers array \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+add\+Number@{Response\+\_\+add\+Number}}
+\index{Response\+\_\+add\+Number@{Response\+\_\+add\+Number}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+add\+Number(\+Response $\ast$self, int number)}{Response_addNumber(Response *self, int number)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+add\+Number (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{self, }
+\item[{int}]{number}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_add589bf288f0a10952a9403fb369beaa}{}\label{request_8h_add589bf288f0a10952a9403fb369beaa}
+
+
+Adds number to response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & -\/ pointer to response \\
+\hline
+{\em number} & -\/ number to insert \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+add\+String@{Response\+\_\+add\+String}}
+\index{Response\+\_\+add\+String@{Response\+\_\+add\+String}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+add\+String(\+Response $\ast$self, const char $\ast$str)}{Response_addString(Response *self, const char *str)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+add\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{self, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_ace3966fdc8d65af52d2e305b80fbdb44}{}\label{request_8h_ace3966fdc8d65af52d2e305b80fbdb44}
+
+
+Adds string to response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & -\/ pointer to response \\
+\hline
+{\em str} & -\/ string to insert \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+cleanup@{Response\+\_\+cleanup}}
+\index{Response\+\_\+cleanup@{Response\+\_\+cleanup}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+cleanup(\+Response $\ast$self)}{Response_cleanup(Response *self)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+cleanup (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_aa8c6f418604b194f3097873160628501}{}\label{request_8h_aa8c6f418604b194f3097873160628501}
+
+
+Frees memory, allocated by response. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & -\/ pointer to response \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+init@{Response\+\_\+init}}
+\index{Response\+\_\+init@{Response\+\_\+init}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+init(\+Response $\ast$self)}{Response_init(Response *self)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_a52d80f6d4886b1bb22cdd1fd84771a1c}{}\label{request_8h_a52d80f6d4886b1bb22cdd1fd84771a1c}
+
+
+Initializes response list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & -\/ pointer to response \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+set\+Error@{Response\+\_\+set\+Error}}
+\index{Response\+\_\+set\+Error@{Response\+\_\+set\+Error}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+set\+Error(\+Response $\ast$self, const char $\ast$error)}{Response_setError(Response *self, const char *error)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+set\+Error (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{self, }
+\item[{const char $\ast$}]{error}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_ab0715b1b2c552d0238c926dcf52dc984}{}\label{request_8h_ab0715b1b2c552d0238c926dcf52dc984}
+
+
+Adds error to respnse. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & -\/ pointer to response \\
+\hline
+{\em error} & -\/ error to insert \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+set\+Items\+Type@{Response\+\_\+set\+Items\+Type}}
+\index{Response\+\_\+set\+Items\+Type@{Response\+\_\+set\+Items\+Type}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+set\+Items\+Type(\+Response $\ast$self, int items\+Type)}{Response_setItemsType(Response *self, int itemsType)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+set\+Items\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{self, }
+\item[{int}]{items\+Type}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_aa41d3721311ccecce32d108ebce30f32}{}\label{request_8h_aa41d3721311ccecce32d108ebce30f32}
+
+
+Sets the type of item that would be stored in response message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em self} & -\/ pointer to response \\
+\hline
+{\em items\+Type} & -\/ the type of item \\
+\hline
+\end{DoxyParams}
+\index{request.\+h@{request.\+h}!Response\+\_\+to\+Message@{Response\+\_\+to\+Message}}
+\index{Response\+\_\+to\+Message@{Response\+\_\+to\+Message}!request.\+h@{request.\+h}}
+\subsubsection[{\texorpdfstring{Response\+\_\+to\+Message(\+Response $\ast$res, Net\+Message $\ast$message)}{Response_toMessage(Response *res, NetMessage *message)}}]{\setlength{\rightskip}{0pt plus 5cm}void Response\+\_\+to\+Message (
+\begin{DoxyParamCaption}
+\item[{{\bf Response} $\ast$}]{res, }
+\item[{Net\+Message $\ast$}]{message}
+\end{DoxyParamCaption}
+)}\hypertarget{request_8h_a22f2a2dea499f25d1b0929cc99ceb897}{}\label{request_8h_a22f2a2dea499f25d1b0929cc99ceb897}
+
+
+Convertes response structure Net\+Message structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & -\/ pointer to response \\
+\hline
+{\em message} & -\/ desired message \\
+\hline
+\end{DoxyParams}

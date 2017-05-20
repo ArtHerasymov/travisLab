@@ -1,0 +1,241 @@
+\hypertarget{list_8c}{}\section{client\+Folder/list.c File Reference}
+\label{list_8c}\index{client\+Folder/list.\+c@{client\+Folder/list.\+c}}
+
+
+Generic list implementation.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$list.\+h$>$}\\*
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+Include dependency graph for list.\+c\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structList}{List}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries empty}(M\+EM,  S\+I\+ZE)~memset(M\+EM, 0, S\+I\+ZE)\hypertarget{list_8c_a67675eb9090255bc94ce7ee873452944}{}\label{list_8c_a67675eb9090255bc94ce7ee873452944}
+
+\item 
+\#define {\bfseries throw}(M\+SG)~assert(0 \&\& M\+SG);\hypertarget{list_8c_a3343c227a5c633487246dadb08ff14b5}{}\label{list_8c_a3343c227a5c633487246dadb08ff14b5}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structList}{List} $\ast$ \hyperlink{list_8c_a35c5162e0d65a50719f6603764691608}{List\+\_\+new} (void)\hypertarget{list_8c_a35c5162e0d65a50719f6603764691608}{}\label{list_8c_a35c5162e0d65a50719f6603764691608}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{list_8c_a15f890c17b1153bb181f177421b41d14}{List\+\_\+free} (\hyperlink{structList}{List} $\ast$$\ast$self\+Ptr)\hypertarget{list_8c_a15f890c17b1153bb181f177421b41d14}{}\label{list_8c_a15f890c17b1153bb181f177421b41d14}
+
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} destructor. \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{list_8c_a67b473280163696049ff9e065fd37f5b}{List\+\_\+get} (\hyperlink{structList}{List} $\ast$self, int index)
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} items getter. \end{DoxyCompactList}\item 
+void \hyperlink{list_8c_a92b6f1b349508d5ebf53564cbd5dc0a6}{List\+\_\+set} (\hyperlink{structList}{List} $\ast$self, int index, void $\ast$ref)
+\begin{DoxyCompactList}\small\item\em \hyperlink{structList}{List} items setter. \end{DoxyCompactList}\item 
+void \hyperlink{list_8c_a97d78543f958fa9143c182ebd4141f98}{List\+\_\+add} (\hyperlink{structList}{List} $\ast$self, void $\ast$ref)
+\begin{DoxyCompactList}\small\item\em adds new item to the end of \hyperlink{structList}{List} \end{DoxyCompactList}\item 
+void \hyperlink{list_8c_aa15c14bc09eb8167858621cef2beb830}{List\+\_\+insert} (\hyperlink{structList}{List} $\ast$self, int index, void $\ast$ref)
+\begin{DoxyCompactList}\small\item\em inserts new item into \hyperlink{structList}{List} at specified position \end{DoxyCompactList}\item 
+int \hyperlink{list_8c_a943da359fbee3844fb7f20667606a16b}{List\+\_\+index\+Of} (\hyperlink{structList}{List} $\ast$self, void $\ast$ref)
+\item 
+bool \hyperlink{list_8c_a287c35a84fe163b1a2f5d572440d7b6a}{List\+\_\+contains} (\hyperlink{structList}{List} $\ast$self, void $\ast$ref)\hypertarget{list_8c_a287c35a84fe163b1a2f5d572440d7b6a}{}\label{list_8c_a287c35a84fe163b1a2f5d572440d7b6a}
+
+\begin{DoxyCompactList}\small\item\em some brief Detailed description \end{DoxyCompactList}\item 
+bool \hyperlink{list_8c_ab937eb2ab8d9035694ff48a50b6a944b}{List\+\_\+remove} (\hyperlink{structList}{List} $\ast$self, void $\ast$ref)
+\begin{DoxyCompactList}\small\item\em remove item from list by value \end{DoxyCompactList}\item 
+void \hyperlink{list_8c_a09911c16cbf6f17300451f793c1ec705}{List\+\_\+remove\+At} (\hyperlink{structList}{List} $\ast$self, int index)
+\begin{DoxyCompactList}\small\item\em remove item at index \end{DoxyCompactList}\item 
+bool \hyperlink{list_8c_a4923d3ac360b1c492d8e5ff583465ded}{List\+\_\+is\+Empty} (\hyperlink{structList}{List} $\ast$self)\hypertarget{list_8c_a4923d3ac360b1c492d8e5ff583465ded}{}\label{list_8c_a4923d3ac360b1c492d8e5ff583465ded}
+
+\begin{DoxyCompactList}\small\item\em determines if list contains any elements \end{DoxyCompactList}\item 
+int \hyperlink{list_8c_a1279d6f45d237426d567a18166678c34}{List\+\_\+count} (\hyperlink{structList}{List} $\ast$self)
+\item 
+void \hyperlink{list_8c_a3e315cf8f73fda4f1a590d2060ca4da5}{List\+\_\+copy\+To} (\hyperlink{structList}{List} $\ast$self, void $\ast$array, int array\+Index)
+\begin{DoxyCompactList}\small\item\em copy all elements starting from array\+Index into array memory \end{DoxyCompactList}\item 
+void {\bfseries List\+\_\+clear} (\hyperlink{structList}{List} $\ast$self)\hypertarget{list_8c_a92f1453accb1f29be48155f8b27f4638}{}\label{list_8c_a92f1453accb1f29be48155f8b27f4638}
+
+\item 
+void \hyperlink{list_8c_a2f548a651d9872ced1cb7b6a5891013c}{List\+\_\+print} (\hyperlink{structList}{List} $\ast$self)\hypertarget{list_8c_a2f548a651d9872ced1cb7b6a5891013c}{}\label{list_8c_a2f548a651d9872ced1cb7b6a5891013c}
+
+\begin{DoxyCompactList}\small\item\em clear all list elements \end{DoxyCompactList}\item 
+int {\bfseries to\+Decimal} (int $\ast$chunk)\hypertarget{list_8c_a62d57ac56ecf69d8d863a6a600e5ede4}{}\label{list_8c_a62d57ac56ecf69d8d863a6a600e5ede4}
+
+\item 
+\hyperlink{structList}{List} $\ast$ {\bfseries List\+\_\+transform} (\hyperlink{structList}{List} $\ast$list)\hypertarget{list_8c_a908aca1b440009edea520b18a1958a31}{}\label{list_8c_a908aca1b440009edea520b18a1958a31}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generic list implementation. 
+
+
+
+\subsection{Function Documentation}
+\index{list.\+c@{list.\+c}!List\+\_\+add@{List\+\_\+add}}
+\index{List\+\_\+add@{List\+\_\+add}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+add(\+List $\ast$self, void $\ast$ref)}{List_add(List *self, void *ref)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{void $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a97d78543f958fa9143c182ebd4141f98}{}\label{list_8c_a97d78543f958fa9143c182ebd4141f98}
+
+
+adds new item to the end of \hyperlink{structList}{List} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & -\/ reference to memory from where to read new value \\
+\hline
+\end{DoxyParams}
+\index{list.\+c@{list.\+c}!List\+\_\+copy\+To@{List\+\_\+copy\+To}}
+\index{List\+\_\+copy\+To@{List\+\_\+copy\+To}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+copy\+To(\+List $\ast$self, void $\ast$array, int array\+Index)}{List_copyTo(List *self, void *array, int arrayIndex)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+\_\+copy\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{void $\ast$}]{array, }
+\item[{int}]{array\+Index}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a3e315cf8f73fda4f1a590d2060ca4da5}{}\label{list_8c_a3e315cf8f73fda4f1a590d2060ca4da5}
+
+
+copy all elements starting from array\+Index into array memory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & -\/ pointer to destination memory \\
+\hline
+{\em array\+Index} & -\/ index of \hyperlink{structList}{List} element to start copy from \\
+\hline
+\end{DoxyParams}
+\index{list.\+c@{list.\+c}!List\+\_\+count@{List\+\_\+count}}
+\index{List\+\_\+count@{List\+\_\+count}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+count(\+List $\ast$self)}{List_count(List *self)}}]{\setlength{\rightskip}{0pt plus 5cm}int List\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a1279d6f45d237426d567a18166678c34}{}\label{list_8c_a1279d6f45d237426d567a18166678c34}
+\begin{DoxyReturn}{Returns}
+a number of items in list 
+\end{DoxyReturn}
+\index{list.\+c@{list.\+c}!List\+\_\+get@{List\+\_\+get}}
+\index{List\+\_\+get@{List\+\_\+get}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+get(\+List $\ast$self, int index)}{List_get(List *self, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ List\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a67b473280163696049ff9e065fd37f5b}{}\label{list_8c_a67b473280163696049ff9e065fd37f5b}
+
+
+\hyperlink{structList}{List} items getter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of element \\
+\hline
+{\em ref} & -\/ reference to memory where to write the value \\
+\hline
+\end{DoxyParams}
+\index{list.\+c@{list.\+c}!List\+\_\+index\+Of@{List\+\_\+index\+Of}}
+\index{List\+\_\+index\+Of@{List\+\_\+index\+Of}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+index\+Of(\+List $\ast$self, void $\ast$ref)}{List_indexOf(List *self, void *ref)}}]{\setlength{\rightskip}{0pt plus 5cm}int List\+\_\+index\+Of (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{void $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a943da359fbee3844fb7f20667606a16b}{}\label{list_8c_a943da359fbee3844fb7f20667606a16b}
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & -\/ points to memory with value to find \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+index of matched value or -\/1 otherwise 
+\end{DoxyReturn}
+\index{list.\+c@{list.\+c}!List\+\_\+insert@{List\+\_\+insert}}
+\index{List\+\_\+insert@{List\+\_\+insert}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+insert(\+List $\ast$self, int index, void $\ast$ref)}{List_insert(List *self, int index, void *ref)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+\_\+insert (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{int}]{index, }
+\item[{void $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_aa15c14bc09eb8167858621cef2beb830}{}\label{list_8c_aa15c14bc09eb8167858621cef2beb830}
+
+
+inserts new item into \hyperlink{structList}{List} at specified position 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of element to insert before \\
+\hline
+{\em ref} & -\/ reference to memory from where to read new value \\
+\hline
+\end{DoxyParams}
+\index{list.\+c@{list.\+c}!List\+\_\+remove@{List\+\_\+remove}}
+\index{List\+\_\+remove@{List\+\_\+remove}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+remove(\+List $\ast$self, void $\ast$ref)}{List_remove(List *self, void *ref)}}]{\setlength{\rightskip}{0pt plus 5cm}bool List\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{void $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_ab937eb2ab8d9035694ff48a50b6a944b}{}\label{list_8c_ab937eb2ab8d9035694ff48a50b6a944b}
+
+
+remove item from list by value 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ref} & -\/ reference to memory from where to read compared value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if success removal 
+\end{DoxyReturn}
+\index{list.\+c@{list.\+c}!List\+\_\+remove\+At@{List\+\_\+remove\+At}}
+\index{List\+\_\+remove\+At@{List\+\_\+remove\+At}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+remove\+At(\+List $\ast$self, int index)}{List_removeAt(List *self, int index)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+\_\+remove\+At (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a09911c16cbf6f17300451f793c1ec705}{}\label{list_8c_a09911c16cbf6f17300451f793c1ec705}
+
+
+remove item at index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of element to remove \\
+\hline
+\end{DoxyParams}
+\index{list.\+c@{list.\+c}!List\+\_\+set@{List\+\_\+set}}
+\index{List\+\_\+set@{List\+\_\+set}!list.\+c@{list.\+c}}
+\subsubsection[{\texorpdfstring{List\+\_\+set(\+List $\ast$self, int index, void $\ast$ref)}{List_set(List *self, int index, void *ref)}}]{\setlength{\rightskip}{0pt plus 5cm}void List\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{{\bf List} $\ast$}]{self, }
+\item[{int}]{index, }
+\item[{void $\ast$}]{ref}
+\end{DoxyParamCaption}
+)}\hypertarget{list_8c_a92b6f1b349508d5ebf53564cbd5dc0a6}{}\label{list_8c_a92b6f1b349508d5ebf53564cbd5dc0a6}
+
+
+\hyperlink{structList}{List} items setter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & -\/ index of element \\
+\hline
+{\em ref} & -\/ reference to memory from where to read new value \\
+\hline
+\end{DoxyParams}

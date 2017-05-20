@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/master/repository/progbase2/labs/lab8.2/clientFolder/client.c
+stdio.h
+-
+string.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+fcntl.h
+-
+unistd.h
+-
+list.h
+-
+jansson.h
+-
+
+/home/master/repository/progbase2/labs/lab8.2/clientFolder/list.c
+stdio.h
+-
+list.h
+-
+assert.h
+-
+stdlib.h
+-
+string.h
+-
+math.h
+-
+
+include/list.h
+stdlib.h
+-
+stdbool.h
+-
+

@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/master/repository/progbase2/labs/lab8.2/build",
+  "command": "/usr/bin/cc   -I/home/master/repository/progbase2/labs/lab8.2/include  -std=c99 -Werror -Wall -g   -o CMakeFiles/client.dir/clientFolder/client.c.o   -c /home/master/repository/progbase2/labs/lab8.2/clientFolder/client.c",
+  "file": "/home/master/repository/progbase2/labs/lab8.2/clientFolder/client.c"
+},
+{
+  "directory": "/home/master/repository/progbase2/labs/lab8.2/build",
+  "command": "/usr/bin/cc   -I/home/master/repository/progbase2/labs/lab8.2/include  -std=c99 -Werror -Wall -g   -o CMakeFiles/client.dir/clientFolder/list.c.o   -c /home/master/repository/progbase2/labs/lab8.2/clientFolder/list.c",
+  "file": "/home/master/repository/progbase2/labs/lab8.2/clientFolder/list.c"
+},
+{
+  "directory": "/home/master/repository/progbase2/labs/lab8.2/build",
+  "command": "/usr/bin/cc   -I/home/master/repository/progbase2/labs/lab8.2/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/handlers.c.o   -c /home/master/repository/progbase2/labs/lab8.2/handlers.c",
+  "file": "/home/master/repository/progbase2/labs/lab8.2/handlers.c"
+},
+{
+  "directory": "/home/master/repository/progbase2/labs/lab8.2/build",
+  "command": "/usr/bin/cc   -I/home/master/repository/progbase2/labs/lab8.2/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/main.c.o   -c /home/master/repository/progbase2/labs/lab8.2/main.c",
+  "file": "/home/master/repository/progbase2/labs/lab8.2/main.c"
+},
+{
+  "directory": "/home/master/repository/progbase2/labs/lab8.2/build",
+  "command": "/usr/bin/cc   -I/home/master/repository/progbase2/labs/lab8.2/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/src/request.c.o   -c /home/master/repository/progbase2/labs/lab8.2/src/request.c",
+  "file": "/home/master/repository/progbase2/labs/lab8.2/src/request.c"
+}
+]

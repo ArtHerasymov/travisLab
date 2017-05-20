@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Zack Snyder",
+        "id": 1,
+        "signature": "BvS",
+        "citizenship": "USA"
+    },
+    {
+        "name": "Fyodor Bondarchuk",
+        "id": 2,
+        "signature": "9Rota",
+        "citizenship": "Russia"
+    },
+    {
+        "name": "Christopher Nolan",
+        "id": 3,
+        "signature": "Inception",
+        "citizenship": "USA"
+    },
+    {
+        "name": "Jackie Chan",
+        "id": 4,
+        "signature": "Who am I?",
+        "citizenship": "China"
+    },
+    {
+        "name": "James Cameron",
+        "id": 5,
+        "signature": "Avatar",
+        "citizenship": "USA"
+    }
+]

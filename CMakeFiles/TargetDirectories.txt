@@ -1,0 +1,4 @@
+/home/master/repository/progbase2/labs/lab8.2/CMakeFiles/rebuild_cache.dir
+/home/master/repository/progbase2/labs/lab8.2/CMakeFiles/edit_cache.dir
+/home/master/repository/progbase2/labs/lab8.2/CMakeFiles/client.dir
+/home/master/repository/progbase2/labs/lab8.2/CMakeFiles/server.dir
