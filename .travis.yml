@@ -7,8 +7,6 @@ compiler:
 
 before_install:
   - sudo apt-get install libssl-dev
-  - sh scripts/install-libprogbase.sh
-
 script: 
   - cmake .
   - make .
